@@ -1,0 +1,11 @@
+// Visibility
+// -----------
+
+.is-hidden {
+	@include hidden;
+}
+
+.is-vishidden,
+.sr-only {
+	@include visually-hidden;
+}

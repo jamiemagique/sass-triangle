@@ -1,0 +1,11 @@
+// Clearfix
+// --------
+
+/**
+ * Micro clearfix, as per: nicolasgallagher.com/micro-clearfix-hack
+ * Use the `micro-clearfix` mixin with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.cf {
+	@include micro-clearfix;
+}

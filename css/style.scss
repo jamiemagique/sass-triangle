@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/**
+ * Here we start to pull everything together into one big stylesheet.
+ *
+ * SETUP............Settings, tools, mixins, etc.
+ * GENERIC..........normalize.css, reset, shared styles, etc.
+ * BASE.............Basic HTML elements.
+ * OBJECTS..........Objects, abstractions, design patterns.
+ * COMPONENTS.......Components and modules.
+ * TRUMPS...........Helpers, overrides, ‘trump-cards’.
+ */
+
+
+// Setup
+// -----
+/**
+ * Settings, variables and tools.
+ */
+@import "scss/settings/all",
+				"scss/tools/all";
+
+
+// Generic
+// -------	
+/**
+ * These are far reaching styles that affect and underpin every element on the
+ * page, e.g. * {}.
+ */	
+@import "scss/generic/all";
+
+
+// Base
+// ----
+/**
+ * These are base HTML elements, things with no classes on them, e.g. h1 {},
+ * blockquote {}.
+ */
+@import "scss/base/all";
+
+
+// Layout
+// ------
+/**
+ * The sites layout and grid system
+ */
+@import "scss/layout/all";
+
+// Objects
+// -------
+/**
+ * These are design-free objects, abstractions and design patterns. These create
+ * constructs that you lay your designs over.
+ */
+@import "scss/objects/all";
+
+
+// Components
+// ---------
+/**
+ * These are your components and modules; things like buttons, accordions,
+ * carousels, etc.
+ */
+@import "scss/components/all";
+
+
+// Trumps
+// -----------
+/**
+ * These are helper classes and overrides that should take precedence over all
+ * other styles, e.g. .is-hidden {}.
+ */
+@import "scss/trumps/all";
