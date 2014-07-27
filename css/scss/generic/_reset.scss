@@ -4,15 +4,15 @@
 // -----------
 
 /**
- * Let’s make the box model all nice, shall we…?
+ * Let's make the box model all nice, shall we?
  */
 * {
 
-  &,
-  &:before,
-  &:after {
-		@include vendor(box-sizing, border-box);
-  }
+    &,
+    &:before,
+    &:after {
+    	@include vendor(box-sizing, border-box);
+    }
 
 }
 
@@ -25,8 +25,8 @@ dl,dd,ol,ul,
 form,fieldset,legend,
 table,th,td,caption,
 hr {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /**
@@ -40,19 +40,19 @@ abbr[title],dfn[title] {
  * Remove underlines from potentially troublesome elements.
  */
 a,u,ins {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /**
  * Apply faux underline via `border-bottom`.
  */
 ins {
-  border-bottom: 1px solid;
+    border-bottom: 1px solid;
 }
 
 /**
- * So that `alt` text is visually offset if images don’t load.
+ * So that `alt` text is visually offset if images don't load.
  */
 img {
-  font-style: italic;
+    font-style: italic;
 }

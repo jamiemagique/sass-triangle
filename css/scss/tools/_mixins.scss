@@ -29,7 +29,7 @@
 // Hide only visually, but have it available for screenreaders
 @mixin visually-hidden {
   border: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -60,11 +60,6 @@
 // 2. The use of `table` rather than `block` is only necessary if using
 //    `:before` to contain the top-margins of child elements.
 @mixin micro-clearfix {
-  // For IE 6/7 only
-  // Include this rule to trigger hasLayout and contain floats.
-  & {
-    *zoom: 1;
-  }
 
   &:before,
   &:after {
