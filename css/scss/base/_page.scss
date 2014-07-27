@@ -7,14 +7,18 @@
  *    height in a unitless value.
  */
 html {
-  font-size: ($font-size / 16px) +em; /* [1] */
-  line-height: $line-height / $font-size; /* [1] */
-  color: $text-color;
+	font-size: ($font-size / 18px) +em; /* [1] */
+	line-height: $line-height / $font-size; /* [1] */
+	color: $text-color;
 
-  @if $show-baseline-grid == true {
+	@if $show-baseline-grid == true {
 
-    $baseline-size: strip-units($spacing-unit);
+		$baseline-size: strip-units($spacing-unit);
 
-    background-image: url(http://basehold.it/i/#{$baseline-size});
-  }
+	    background-image: url(http://basehold.it/i/#{$baseline-size});
+	}
+
+	@include bp-min(small) {
+		font-size: ($font-size / 16px) +em; /* [1] */
+	}
 }

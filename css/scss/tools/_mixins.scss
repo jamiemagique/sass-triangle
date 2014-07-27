@@ -1,16 +1,42 @@
-// Mixins
-// ------
-
+// FONT SIZE
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a single value, e.g. @include font-size(10px);
-@mixin font-size($font-size, $line-height: true) {
-	font-size: $font-size;
-	font-size: ($font-size / $base--font-size) * 1rem;
+@mixin font-size($size, $height: true) {
+	font-size: $size;
+	font-size: ($size / $font-size) * 1rem;
 	
-	@if $line-height == true {
-		line-height: ceil($font-size / $base--line-height) * ($base--line-height / $font-size);
+	@if $height == true {
+		line-height: ceil($size / $line-height) * ($line-height / $size);
 	}
 }
 
+
+// MEDIA QUERIES
+@mixin bp($media) {
+  @if $media == small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+@mixin bp-min($media) {
+  @if $media == small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-small + 1) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
+// VENDOR
 // Create vendor-prefixed CSS in one go, e.g. @include vendor(border-radius, 4px);
 @mixin vendor($property, $value) {
   -webkit-#{$property}: $value;
@@ -20,6 +46,8 @@
           #{$property}: $value;
 }
 
+
+// HIDDEN
 // Hide from both screenreaders and browsers
 @mixin hidden {
   display: none !important;
@@ -50,6 +78,8 @@
   }
 }
 
+
+// CLEARFIX
 // Clearfix: contain floats
 //
 // For modern browsers
@@ -72,3 +102,4 @@
   }
   
 }
+

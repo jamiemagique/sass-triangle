@@ -1,12 +1,24 @@
-// Variables
-// ---------
-
+// GENERAL
 // Generic, non-specific variables.
 $font-size: 16px;
 $line-height: 24px;
 
 $show-baseline-grid: false;
 
-
 // Framework variables. We don't need to edit these, they're just handy variables sourced from other settings.
 $spacing-unit: $line-height;
+
+
+// SIZES
+$site-width: 1150px;
+
+$break-small: 40em;
+$break-large: 90em;
+
+$spacing: 15px;
+
+$font-size-xsmall: 12px;
+$font-size-small: 14px;
+$font-size-medium: 18px;
+$font-size-large: 24px;
+$font-size-xlarge: 30px;
